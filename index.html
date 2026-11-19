@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a Básica Locadora de Veículos. Escolha seu carro e personalize sua locação.">
+  <title>Básica | Locação de veículos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <nav class="navegacao container" aria-label="Navegação principal">
+      <a class="logo" href="#inicio" aria-label="Básica, página inicial"><span class="logo-simbolo">B</span><span>BÁSICA<span class="logo-ponto">.</span></span></a>
+      <a class="nav-link" href="#pedido">Solicitar locação <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="hero container" id="inicio">
+      <div class="hero-conteudo">
+        <p class="sobretitulo"><span class="ponto-status"></span> SUA PRÓXIMA VIAGEM COMEÇA AQUI</p>
+        <h1>Liberdade para<br>ir mais longe.</h1>
+        <p class="hero-texto">O carro ideal para os seus planos, com uma experiência de locação simples do começo ao fim.</p>
+        <a class="botao botao-claro" href="#pedido">Encontre seu próximo carro <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-detalhe" aria-hidden="true"><span>01</span><i></i><span>Uma jornada mais simples</span></div>
+    </div>
+    <div class="hero-linha" aria-hidden="true"></div>
+  </header>
+
+  <main class="container">
+    <section class="introducao" aria-labelledby="sobre-titulo">
+      <div class="secao-indice"><span>01</span><span class="indice-linha"></span><span>CONHEÇA A BÁSICA</span></div>
+      <div class="intro-grid">
+        <div>
+          <h2 id="sobre-titulo">Mais caminho.<br><span>Menos complicação.</span></h2>
+        </div>
+        <div class="intro-descricao">
+          <p>A Básica Locadora de Veículos oferece opções práticas para quem precisa alugar um carro. Seja para viajar, trabalhar ou aproveitar o dia a dia, ajudamos você a encontrar um veículo que combina com seus planos.</p>
+          <a class="link-texto" href="#pedido">Personalize sua locação <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <figure class="imagem-bloco">
+        <img src="imagens/carros.jpg" alt="Fileiras de carros disponíveis para locação em um pátio iluminado pelo sol." class="foto-destaque">
+        <figcaption><span>FROTA BÁSICA</span><span>Pronta para o seu próximo destino</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="beneficios" aria-labelledby="beneficios-titulo">
+      <div class="beneficios-cabecalho">
+        <div class="secao-indice"><span>02</span><span class="indice-linha"></span><span>POR QUE ESCOLHER A BÁSICA</span></div>
+        <h2 id="beneficios-titulo">Tudo para seguir<br>no seu ritmo.</h2>
+      </div>
+      <div class="beneficios-grid">
+        <article class="beneficio"><span class="beneficio-numero">01</span><h3>Do seu jeito</h3><p>Alternativas para diferentes rotinas, viagens e ocasiões.</p></article>
+        <article class="beneficio"><span class="beneficio-numero">02</span><h3>Sem complicação</h3><p>Uma solicitação simples para você focar no que importa: o caminho.</p></article>
+        <article class="beneficio"><span class="beneficio-numero">03</span><h3>Mais conforto</h3><p>Serviços extras que ajudam a deixar cada trajeto mais agradável.</p></article>
+      </div>
+    </section>
+
+    <section class="pedido" id="pedido" aria-labelledby="pedido-titulo">
+      <div class="pedido-intro">
+        <div class="secao-indice"><span>03</span><span class="indice-linha"></span><span>VAMOS COMEÇAR</span></div>
+        <h2 id="pedido-titulo">Monte sua<br><span>solicitação.</span></h2>
+        <p>Conte um pouco sobre o que você procura. Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios.</p>
+        <div class="aviso-demo"><span aria-hidden="true">i</span><p>Esta é uma demonstração visual. O formulário ainda não está conectado a um sistema de reservas.</p></div>
+      </div>
+
+      <form class="formulario" action="#" method="get">
+        <div class="campo-grid">
+          <div class="campo">
+            <label for="nome-usuario">Nome completo <span class="obrigatorio">*</span></label>
+            <input type="text" id="nome-usuario" name="nome" minlength="3" required autocomplete="name" placeholder="Ex.: Maria da Silva" aria-describedby="dica-nome">
+            <small id="dica-nome">Informe pelo menos 3 caracteres.</small>
+          </div>
+          <div class="campo">
+            <label for="email-usuario">E-mail <span class="obrigatorio">*</span></label>
+            <input type="email" id="email-usuario" name="email" required autocomplete="email" placeholder="voce@exemplo.com">
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Qual tipo de veículo você procura? <span class="obrigatorio">*</span></legend>
+          <p class="campo-ajuda">Selecione uma opção.</p>
+          <div class="opcoes-grid">
+            <label class="opcao"><input type="radio" name="veiculo" value="comercial" required><span>Carro comercial</span></label>
+            <label class="opcao"><input type="radio" name="veiculo" value="suv"><span>SUV</span></label>
+            <label class="opcao"><input type="radio" name="veiculo" value="utilitario"><span>Utilitário</span></label>
+            <label class="opcao"><input type="radio" name="veiculo" value="luxo"><span>Luxo</span></label>
+            <label class="opcao"><input type="radio" name="veiculo" value="eletrico"><span>Elétrico</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Quer incluir algum extra?</legend>
+          <p class="campo-ajuda">Marque todas as opções desejadas.</p>
+          <div class="opcoes-grid">
+            <label class="opcao"><input type="checkbox" name="extras" value="cadeirinha"><span>Cadeirinha infantil</span></label>
+            <label class="opcao"><input type="checkbox" name="extras" value="gps"><span>GPS</span></label>
+            <label class="opcao"><input type="checkbox" name="extras" value="automatico"><span>Câmbio automático</span></label>
+            <label class="opcao"><input type="checkbox" name="extras" value="teto-solar"><span>Teto solar</span></label>
+          </div>
+        </fieldset>
+
+        <button class="botao botao-enviar" type="submit">Enviar solicitação <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <a class="logo logo-rodape" href="#inicio"><span class="logo-simbolo">B</span><span>BÁSICA<span class="logo-ponto">.</span></span></a>
+      <p>Seu caminho, do seu jeito.</p>
+      <span class="rodape-exercicio">PROJETO DEMONSTRATIVO</span>
+    </div>
+  </footer>
+</body>
+</html>
